@@ -4,23 +4,23 @@ import Link from 'next/link';
 
 const WhitepaperPage: React.FC = () => {
   return (
-    <div className="bg-gradient-to-br from-blue-600 to-blue-900 text-white min-h-screen">
+    <div className="bg-gradient-to-br from-blue-600 to-blue-900 text-blue-200 min-h-screen">
       <div className="max-w-5xl mx-auto px-4 py-16">
         <header className="text-center mb-16 relative">
           <Link href="/" className="absolute left-0 top-0 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition-colors">
             ← Back
           </Link>
           <Image src="/xrpl-blue.png" alt="XRPL BLUE Logo" width={100} height={100} className="mx-auto mb-6" />
-          <h1 className="text-5xl font-extrabold mb-2">XRPL BLUE Whitepaper</h1>
+          <h1 className="text-5xl font-extrabold mb-2 text-white">XRPL BLUE Whitepaper</h1>
           <h2 className="text-2xl font-light italic">The Blue Wave of the XRP Ledger</h2>
         </header>
 
         <nav className="mb-12 flex justify-center space-x-6 text-lg">
-          <a href="#project-purpose" className="hover:text-blue-300 transition-colors">Project Purpose</a>
-          <a href="#token-utility" className="hover:text-blue-300 transition-colors">Token Utility</a>
-          <a href="#distribution" className="hover:text-blue-300 transition-colors">Distribution</a>
-          <a href="#legal-disclaimer" className="hover:text-blue-300 transition-colors">Legal Disclaimer</a>
-          <a href="#risks" className="hover:text-blue-300 transition-colors">Risks</a>
+          <a href="#project-purpose" className="hover:text-white transition-colors">Project Purpose</a>
+          <a href="#token-utility" className="hover:text-white transition-colors">Token Utility</a>
+          <a href="#distribution" className="hover:text-white transition-colors">Distribution</a>
+          <a href="#legal-disclaimer" className="hover:text-white transition-colors">Legal Disclaimer</a>
+          <a href="#risks" className="hover:text-white transition-colors">Risks</a>
         </nav>
 
         <main className="space-y-16">
@@ -39,15 +39,12 @@ const WhitepaperPage: React.FC = () => {
 
           <section id="distribution">
             <h2 className="text-3xl font-bold mb-6 border-b border-blue-400 pb-2">Distribution</h2>
-            <p className="mb-4 leading-relaxed">XRPL BLUE aims for a fair and wide distribution to ensure true community ownership. The total supply of 100 billion XRPL BLUE tokens will be distributed as follows:</p>
+            <p className="mb-4 leading-relaxed">XRPL BLUE is committed to a fair launch, ensuring a community-focused approach from day one. The distribution of XRPL BLUE tokens will be as follows:</p>
             <ul className="list-disc pl-6 space-y-2 leading-relaxed">
-              <li>40% Community Airdrop: Distributed to active XRPL users, developers, and community members</li>
-              <li>20% Ecosystem Development: Reserved for future partnerships, integrations, and ecosystem growth</li>
-              <li>15% Team and Advisors: Subject to a 3-year linear vesting schedule</li>
-              <li>10% Community Treasury: Controlled by XRPL BLUE DAO for community-driven initiatives</li>
-              <li>10% Liquidity Provision: To ensure trading liquidity across decentralized exchanges</li>
-              <li>5% Marketing and Awareness: For promoting XRPL BLUE and the wider XRPL ecosystem</li>
+              <li>90% Community Distribution: Bought at First Ledger and then distributed to NFT holders</li>
+              <li>10% AMM Pool: Left in the Automated Market Maker pool to ensure liquidity and support the fair token launch</li>
             </ul>
+            <p className="mt-4 leading-relaxed">This distribution model ensures that the vast majority of the token supply is in the hands of the community from the start, promoting decentralization and fair participation in the XRPL BLUE ecosystem. The 10% left in the AMM pool helps maintain liquidity and supports the fair launch mechanism, allowing for smoother trading and price discovery.</p>
           </section>
 
           <section id="legal-disclaimer">
@@ -72,7 +69,7 @@ const WhitepaperPage: React.FC = () => {
           </section>
         </main>
 
-        <footer className="mt-16 text-center text-sm text-blue-200">
+        <footer className="mt-16 text-center text-sm">
           <p><em>Disclaimer: This whitepaper is for informational purposes only and does not constitute financial advice. Please conduct your own research and consult with a financial advisor before making any investment decisions.</em></p>
         </footer>
       </div>
