@@ -53,6 +53,13 @@ export default function Home() {
       "Chris 'Blue Turbo' Larsplash just made $BLUE faster than his digital Porsche! 🏎️💨 #XRPLBLUE to the moon!",
       "Jed 'Blue Drift' McWhaleb left, but $BLUE keeps swimming! 🐳💙 Once BLUE, always BLUE! #XRPLBLUE",
       "The $BLUE crew is assembling! 🦸‍♂️🦸‍♀️ Who's your favorite BLUE legend? #XRPLBLUE",
+      // New funny tweets with link
+      "Just found out my mood ring turns $BLUE when I check my portfolio! 💍💙 Must be a good sign! 🚀 Learn more: https://xrpl.blue #XRPLBLUE",
+      "Breaking: Scientists confirm $BLUE is the official color of financial freedom! 🧑‍🔬💙 Join the revolution: https://xrpl.blue #XRPLBLUE",
+      "My therapist said I talk about $BLUE too much. So I got a new therapist! 🛋️💙 Find out why: https://xrpl.blue #XRPLBLUE",
+      "I tried to paint the town red, but it came out $BLUE instead! 🎨💙 Best mistake ever! Discover more: https://xrpl.blue #XRPLBLUE",
+      "Roses are red, violets are $BLUE, if you're not holding XRPL BLUE, what are you gonna do? 🌹💙 Get in now: https://xrpl.blue #XRPLBLUE",
+      "I asked my magic 8 ball if $BLUE will moon. It turned blue and said 'Absolutely!' 🎱💙 See the future: https://xrpl.blue #XRPLBLUE",
     ];
     const randomTweet = tweets[Math.floor(Math.random() * tweets.length)];
     const tweetText = encodeURIComponent(randomTweet);
