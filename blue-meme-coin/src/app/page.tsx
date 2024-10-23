@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Head from 'next/head';
-import Image from 'next/image';
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -58,19 +57,10 @@ export default function Home() {
 
         <main className="flex-grow flex flex-col items-center justify-center p-8 text-center relative z-10">
           <div className="relative">
-            {/* Updated "B" letter styling with an even bigger frame but same image size */}
+            {/* Updated styling without the "B" letter */}
             <div className="relative w-80 h-80 flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg shadow-lg transform rotate-3"></div>
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-400 to-blue-600 rounded-lg shadow-lg transform -rotate-3"></div>
-              <Image
-                src="/xrpl-blue.png"
-                alt="XRPL Blue"
-                width={300}
-                height={300}
-                className="absolute w-3/5 h-3/5 object-contain"
-                style={{ top: '20%', left: '20%' }}
-              />
-              <span className="absolute text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white z-10 top-16 right-16 transform -translate-y-1/2 translate-x-1/2">B</span>
             </div>
             {/* Updated animated bubble */}
             <div className="absolute -top-8 -right-8 bg-yellow-400 text-blue-800 rounded-full p-3 transform rotate-12 shadow-lg">
