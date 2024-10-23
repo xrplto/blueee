@@ -25,6 +25,41 @@ export default function Home() {
     return () => clearInterval(intervalId);
   }, []);
 
+  const handleTweet = () => {
+    const tweets = [
+      "🟦 $BLUE to the moon! 🚀 The cutest meme coin on the XRP Ledger is taking off! 🌙 #XRPLBLUE",
+      "Just aped into $BLUE! 🦍💙 This meme coin is going to change the game! 🎮💰 #XRPLBLUE",
+      "🟦 $BLUE is the new green! 💙💹 #XRPLBLUE is pumping and I'm here for it! 📈",
+      "Feeling $BLUE in the best way possible! 😎 #XRPLBLUE is the hottest meme coin on XRPL! 🔥",
+      "Who needs gold when you have $BLUE? 💙 #XRPLBLUE is my ticket to financial freedom! 💸",
+      "🟦 $BLUE skies ahead for #XRPLBLUE hodlers! ☁️💙 This meme coin is going stratospheric! 🛸",
+      "Just filled my bags with $BLUE! 💼💙 Ready for this rocket ship to Uranus! 🚀🪐 #XRPLBLUE",
+      "🟦 $BLUE to the moon and beyond! 🌙✨ The XRP Ledger's cutest astronaut is blasting off! #XRPLBLUE",
+      "$BLUE wave incoming! 🌊💙 Surf's up on the XRP Ledger! 🏄‍♂️ #XRPLBLUE",
+      "🟦 Forget diamond hands, I've got $BLUE hands now! 💎➡️💙 #XRPLBLUE to the moon! 🚀",
+      "The future is $BLUE! 🔮💙 Watch #XRPLBLUE paint the crypto world in shades of awesome! 🎨",
+      "🟦 $BLUE: Because every portfolio needs a splash of cuteness! 😍💙 #XRPLBLUE to the moon! 🌙",
+      // New tweets added below
+      "I'm not sad, I'm just $BLUE with excitement! 😄💙 #XRPLBLUE is making waves! 🌊",
+      "🟦 $BLUE: The only coin that looks good with my Smurf costume! 🧙‍♂️💙 #XRPLBLUE",
+      "Just convinced my grandma to buy $BLUE! She said it matches her hair! 👵💙 #XRPLBLUE",
+      "🟦 $BLUE is so hot right now, I'm using it to toast my marshmallows! 🔥🍡 #XRPLBLUE",
+      "I tried to buy the dip, but $BLUE only goes up! 📈💙 #XRPLBLUE to infinity and beyond! 🚀",
+      "🟦 $BLUE: The official currency of Cookie Monster's dreams! 🍪💙 #XRPLBLUE nom nom nom!",
+      // New tweets with lore characters
+      "Just saw Brad 'Big Blue' Sailhouse surfing the $BLUE waves! 🏄‍♂️💙 This captain knows how to HODL! #XRPLBLUE",
+      "David 'Deep Blue' Wavewartz just fixed a bug while scuba diving! 🐠💻 $BLUE runs deep! #XRPLBLUE",
+      "Rumor has it, Arthur 'The Unseen Blue' Subbritto communicates only in $BLUE emojis! 👻💙 #XRPLBLUE",
+      "Chris 'Blue Turbo' Larsplash just made $BLUE faster than his digital Porsche! 🏎️💨 #XRPLBLUE to the moon!",
+      "Jed 'Blue Drift' McWhaleb left, but $BLUE keeps swimming! 🐳💙 Once BLUE, always BLUE! #XRPLBLUE",
+      "The $BLUE crew is assembling! 🦸‍♂️🦸‍♀️ Who's your favorite BLUE legend? #XRPLBLUE",
+    ];
+    const randomTweet = tweets[Math.floor(Math.random() * tweets.length)];
+    const tweetText = encodeURIComponent(randomTweet);
+    const tweetUrl = `https://twitter.com/intent/tweet?text=${tweetText}`;
+    window.open(tweetUrl, '_blank');
+  };
+
   return (
     <>
       <Head>
@@ -60,6 +95,13 @@ export default function Home() {
             <div className="relative w-64 h-64 flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg shadow-lg transform rotate-3"></div>
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-400 to-blue-600 rounded-lg shadow-lg transform -rotate-3"></div>
+              {/* New Tweet button */}
+              <button
+                onClick={handleTweet}
+                className="absolute bottom-2 right-2 bg-blue-200 text-blue-800 font-bold py-1 px-3 rounded-full hover:bg-blue-300 transition-colors text-xs"
+              >
+                Tweet 🔵
+              </button>
             </div>
             <div className="absolute -top-6 -right-6 bg-yellow-400 text-blue-800 rounded-full p-2 transform rotate-12 shadow-lg">
               <p className="text-xs font-bold whitespace-nowrap">{bubbleText}</p>
@@ -123,13 +165,13 @@ export default function Home() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl font-bold mb-4 text-blue-200">The Legend of $BLUE</h2>
             <p className="text-blue-200 mb-2 leading-relaxed text-sm">
-              In the deep waters of the XRP Ledger, where $BLUE rules the currents, there&apos;s no shortage of legendary captains steering this digital ship. At the helm, you&apos;ve got Brad &ldquo;Big Blue&rdquo; Sailhouse, a man who could trade in a hurricane without losing his sea legs, and his trusty co-captain, David &ldquo;Deep Blue&rdquo; Wavewartz, the code-writing genius who can debug smart contracts while snorkeling.
+              In the deep waters of the XRP Ledger, where $BLUE rules the currents, there&apos; s no shortage of legendary captains steering this digital ship. At the helm, you&apos; ve got Brad &ldquo;Big Blue&rdquo; Sailhouse, a man who could trade in a hurricane without losing his sea legs, and his trusty co-captain, David &ldquo;Deep Blue&rdquo; Wavewartz, the code-writing genius who can debug smart contracts while snorkeling.
             </p>
             <p className="text-blue-200 mb-2 leading-relaxed text-sm">
-              Lurking in the shadows was Arthur &ldquo;The Unseen Blue&rdquo; Subbritto, a figure so mysterious that people say he communicates through blockchain ripples, never seen but always felt. Then, of course, there&apos;s Chris &ldquo;Blue Turbo&rdquo; Larsplash, who&apos;s more interested in speeding up transactions—and his digital Porsche—than anything else, always pushing for faster trades.
+              Lurking in the shadows was Arthur &ldquo;The Unseen Blue&rdquo; Subbritto, a figure so mysterious that people say he communicates through blockchain ripples, never seen but always felt. Then, of course, there&apos; s Chris &ldquo;Blue Turbo&rdquo; Larsplash, who&apos; s more interested in speeding up transactions—and his digital Porsche—than anything else, always pushing for faster trades.
             </p>
             <p className="text-blue-200 mb-2 leading-relaxed text-sm">
-              But let&apos;s not forget Jed &ldquo;Blue Drift&rdquo; McWhaleb, who made waves by charting his own course, sailing off to explore new oceans but leaving behind a legacy of tidal shifts in the ledger. Together, these characters turned $BLUE from a simple currency into a legendary treasure that flows through the decentralized seas, offering power, protection, and a lot of good-natured maritime banter!
+              But let&apos; s not forget Jed &ldquo;Blue Drift&rdquo; McWhaleb, who made waves by charting his own course, sailing off to explore new oceans but leaving behind a legacy of tidal shifts in the ledger. Together, these characters turned $BLUE from a simple currency into a legendary treasure that flows through the decentralized seas, offering power, protection, and a lot of good-natured maritime banter!
             </p>
           </div>
         </section>
