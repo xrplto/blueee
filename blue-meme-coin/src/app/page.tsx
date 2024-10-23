@@ -94,6 +94,16 @@ export default function Home() {
 
         <footer className="py-4 text-center text-sm">
           <p>&copy; 2023 XRPL BLUE. All rights reserved.</p>
+          <div className="mt-2">
+            <a
+              href="https://x.com/xrplblue"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-yellow-400 transition-colors"
+            >
+              Follow us on X
+            </a>
+          </div>
         </footer>
 
         {showModal && (
