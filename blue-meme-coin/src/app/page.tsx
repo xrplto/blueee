@@ -47,25 +47,30 @@ export default function Home() {
           </div>
           <h1 className="text-4xl font-bold mt-8 mb-2">XRPL BLUE</h1>
           <p className="text-xl mb-6">The cutest meme coin on the XRP Ledger!</p>
-          
+
           <div className="flex flex-wrap gap-4 justify-center">
             <button className="bg-white text-blue-600 font-bold py-2 px-6 rounded-full hover:bg-blue-100 transition-colors">
               Buy Now
             </button>
-            <button 
+            <button
               className="bg-transparent border-2 border-white font-bold py-2 px-6 rounded-full hover:bg-white hover:text-blue-600 transition-colors"
               onClick={() => setShowModal(true)}
             >
               Learn More
             </button>
-            <button className="bg-yellow-400 text-blue-600 font-bold py-2 px-6 rounded-full hover:bg-yellow-300 transition-colors">
+            <a
+              href="https://xrplblue.printful.me/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-yellow-400 text-blue-600 font-bold py-2 px-6 rounded-full hover:bg-yellow-300 transition-colors"
+            >
               Shop Merch
-            </button>
+            </a>
           </div>
 
           {/* Update Whitepaper link here */}
-          <a 
-            href="/whitepaper" 
+          <a
+            href="/whitepaper"
             className="mt-4 text-white underline hover:text-yellow-400 transition-colors"
           >
             Read our Whitepaper
@@ -104,7 +109,7 @@ export default function Home() {
               <p className="mb-4">
                 Join our vibrant community and be part of the BLUE revolution in the XRP Ledger ecosystem!
               </p>
-              <button 
+              <button
                 className="bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700 transition-colors"
                 onClick={() => setShowModal(false)}
               >
