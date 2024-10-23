@@ -1,11 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Head from 'next/head';
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
   const [bubbleText, setBubbleText] = useState("Hi, I'm BLUE");
+
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const texts = [
@@ -67,6 +69,45 @@ export default function Home() {
     window.open(tweetUrl, '_blank');
   };
 
+  const handleDownload = () => {
+    if (canvasRef.current) {
+      const canvas = canvasRef.current;
+      const ctx = canvas.getContext('2d');
+      if (ctx) {
+        // Create gradient
+        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient.addColorStop(0, '#60A5FA');  // blue-400
+        gradient.addColorStop(1, '#2563EB');  // blue-600
+
+        // Set up rounded rectangle
+        const width = 400;
+        const height = 400;
+        const radius = 40;  // Adjust this value to change the roundness of the corners
+
+        // Draw rounded rectangle with gradient
+        ctx.beginPath();
+        ctx.moveTo(radius, 0);
+        ctx.arcTo(width, 0, width, height, radius);
+        ctx.arcTo(width, height, 0, height, radius);
+        ctx.arcTo(0, height, 0, 0, radius);
+        ctx.arcTo(0, 0, width, 0, radius);
+        ctx.closePath();
+
+        ctx.fillStyle = gradient;
+        ctx.fill();
+
+        // Convert canvas to PNG
+        const dataUrl = canvas.toDataURL('image/png');
+        const downloadLink = document.createElement('a');
+        downloadLink.href = dataUrl;
+        downloadLink.download = 'blue_square.png';
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+      }
+    }
+  };
+
   return (
     <>
       <Head>
@@ -99,19 +140,29 @@ export default function Home() {
 
         <main className="flex-grow flex flex-col items-center justify-center p-4 text-center relative z-10">
           <div className="relative">
-            <div className="relative w-64 h-64 flex items-center justify-center">
+            <div className="relative w-[400px] h-[400px] flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg shadow-lg transform rotate-3"></div>
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-400 to-blue-600 rounded-lg shadow-lg transform -rotate-3"></div>
-              {/* New Tweet button */}
-              <button
-                onClick={handleTweet}
-                className="absolute bottom-2 right-2 bg-blue-200 text-blue-800 font-bold py-1 px-3 rounded-full hover:bg-blue-300 transition-colors text-xs"
-              >
-                Tweet 🔵
-              </button>
+              <canvas ref={canvasRef} width="400" height="400" className="hidden"></canvas>
+              <div className="w-[400px] h-[400px] bg-[#3B82F6] rounded-[40px]"></div>
+              {/* New Tweet and Download buttons */}
+              <div className="absolute bottom-4 right-4 flex space-x-2">
+                <button
+                  onClick={handleTweet}
+                  className="bg-blue-200 text-blue-800 font-bold py-2 px-4 rounded-full hover:bg-blue-300 transition-colors text-sm"
+                >
+                  Tweet 🔵
+                </button>
+                <button
+                  onClick={handleDownload}
+                  className="bg-green-200 text-green-800 font-bold py-2 px-4 rounded-full hover:bg-green-300 transition-colors text-sm"
+                >
+                  Download 📥
+                </button>
+              </div>
             </div>
-            <div className="absolute -top-6 -right-6 bg-yellow-400 text-blue-800 rounded-full p-2 transform rotate-12 shadow-lg">
-              <p className="text-xs font-bold whitespace-nowrap">{bubbleText}</p>
+            <div className="absolute -top-8 -right-8 bg-yellow-400 text-blue-800 rounded-full p-3 transform rotate-12 shadow-lg">
+              <p className="text-sm font-bold whitespace-nowrap">{bubbleText}</p>
             </div>
           </div>
           <h1 className="text-3xl font-bold mt-6 mb-2 text-blue-200">BLUE</h1>
