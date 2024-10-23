@@ -6,10 +6,11 @@ import Head from 'next/head';
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
-  const [bubbleText, setBubbleText] = useState("HYPE Airdrop");
+  const [bubbleText, setBubbleText] = useState("Hi, I'm BLUE");
 
   useEffect(() => {
     const texts = [
+      "Hi, I'm BLUE",
       "HYPE Airdrop",
       "Coming Soon!",
       "NFT holders",
@@ -40,14 +41,13 @@ export default function Home() {
               height={200}
               priority
             />
-            {/* Animated HYPE Airdrop bubble */}
+            {/* Updated animated bubble */}
             <div className="absolute -top-4 -right-4 bg-yellow-400 text-blue-800 rounded-full p-3 transform rotate-12 shadow-lg">
               <p className="text-sm font-bold whitespace-nowrap">{bubbleText}</p>
             </div>
           </div>
-          {/* Add the "Hi, I'm BLUE" text here */}
-          <p className="text-2xl font-bold mt-4 mb-2">Hi, I&apos;m BLUE</p>
-          <h1 className="text-4xl font-bold mt-2 mb-2">XRPL BLUE</h1>
+          {/* Remove the separate "Hi, I'm BLUE" text */}
+          <h1 className="text-4xl font-bold mt-6 mb-2">XRPL BLUE</h1>
           <p className="text-xl mb-6">The cutest meme coin on the XRP Ledger!</p>
 
           <div className="flex flex-wrap gap-4 justify-center">
