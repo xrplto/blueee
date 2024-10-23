@@ -57,11 +57,17 @@ export default function Home() {
 
         <main className="flex-grow flex flex-col items-center justify-center p-8 text-center relative z-10">
           <div className="relative">
-            {/* Enhanced "B" letter styling with slightly bigger frame */}
+            {/* Updated "B" letter styling with slightly smaller B */}
             <div className="relative w-52 h-52 flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg shadow-lg transform rotate-3"></div>
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-400 to-blue-600 rounded-lg shadow-lg transform -rotate-3"></div>
-              <span className="relative text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white z-10">B</span>
+              <img
+                src="/xrpl-blue.png"
+                alt="XRPL Blue"
+                className="absolute w-3/5 h-3/5 object-contain"
+                style={{ top: '20%', left: '20%' }}
+              />
+              <span className="absolute text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white z-10 top-11 right-11 transform -translate-y-1/2 translate-x-1/2">B</span>
             </div>
             {/* Updated animated bubble */}
             <div className="absolute -top-4 -right-4 bg-yellow-400 text-blue-800 rounded-full p-3 transform rotate-12 shadow-lg">
