@@ -27,7 +27,7 @@ const WhitepaperPage: React.FC = () => {
           <section id="project-purpose">
             <h2 className="text-3xl font-bold mb-6 border-b border-blue-400 pb-2">Project Purpose</h2>
             <p className="mb-4 leading-relaxed">XRPL BLUE is designed to be the pulse-pounding social catalyst and community-driven meme coin of the XRP Ledger, seamlessly woven into the fabric of the XRPL ecosystem as a high-octane utility token. Our mission is to skyrocket through the crypto stratosphere by expanding our ever-growing constellation of integrations across the XRPL universe!</p>
-            <p className="leading-relaxed">For too long, the XRP Ledger has been associated primarily with traditional finance use cases. XRPL BLUE aims to bring a fresh, vibrant energy to the ecosystem, showcasing the network's potential for community-driven projects and decentralized applications.</p>
+            <p className="leading-relaxed">For too long, the XRP Ledger has been associated primarily with traditional finance use cases. XRPL BLUE aims to bring a fresh, vibrant energy to the ecosystem, showcasing the network&apos;s potential for community-driven projects and decentralized applications.</p>
           </section>
 
           <section id="token-utility">

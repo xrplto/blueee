@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Head from 'next/head';
+import Image from 'next/image';
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -57,24 +58,26 @@ export default function Home() {
 
         <main className="flex-grow flex flex-col items-center justify-center p-8 text-center relative z-10">
           <div className="relative">
-            {/* Updated "B" letter styling with slightly smaller B */}
-            <div className="relative w-52 h-52 flex items-center justify-center">
+            {/* Updated "B" letter styling with an even bigger frame but same image size */}
+            <div className="relative w-80 h-80 flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg shadow-lg transform rotate-3"></div>
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-400 to-blue-600 rounded-lg shadow-lg transform -rotate-3"></div>
-              <img
+              <Image
                 src="/xrpl-blue.png"
                 alt="XRPL Blue"
+                width={300}
+                height={300}
                 className="absolute w-3/5 h-3/5 object-contain"
                 style={{ top: '20%', left: '20%' }}
               />
-              <span className="absolute text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white z-10 top-11 right-11 transform -translate-y-1/2 translate-x-1/2">B</span>
+              <span className="absolute text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white z-10 top-16 right-16 transform -translate-y-1/2 translate-x-1/2">B</span>
             </div>
             {/* Updated animated bubble */}
-            <div className="absolute -top-4 -right-4 bg-yellow-400 text-blue-800 rounded-full p-3 transform rotate-12 shadow-lg">
+            <div className="absolute -top-8 -right-8 bg-yellow-400 text-blue-800 rounded-full p-3 transform rotate-12 shadow-lg">
               <p className="text-sm font-bold whitespace-nowrap">{bubbleText}</p>
             </div>
           </div>
-          <h1 className="text-4xl font-bold mt-6 mb-2 text-blue-200">BLUE</h1>
+          <h1 className="text-4xl font-bold mt-10 mb-2 text-blue-200">BLUE</h1>
           <p className="text-xl mb-6 text-blue-200">The cutest meme coin on the XRP Ledger!</p>
 
           <div className="flex flex-wrap gap-4 justify-center">
@@ -144,7 +147,7 @@ export default function Home() {
         </footer>
 
         {showModal && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
             <div className="bg-blue-800 text-blue-200 p-8 rounded-lg max-w-2xl w-full">
               <h2 className="text-3xl font-bold mb-4">About XRPL BLUE</h2>
               <p className="mb-4">
