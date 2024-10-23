@@ -1,11 +1,29 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Head from 'next/head';
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
+  const [bubbleText, setBubbleText] = useState("HYPE Airdrop");
+
+  useEffect(() => {
+    const texts = [
+      "HYPE Airdrop",
+      "Coming Soon!",
+      "NFT holders",
+      "BLUE to the moon!"
+    ];
+    let currentIndex = 0;
+
+    const intervalId = setInterval(() => {
+      currentIndex = (currentIndex + 1) % texts.length;
+      setBubbleText(texts[currentIndex]);
+    }, 3000); // Change text every 3 seconds
+
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <>
@@ -14,13 +32,19 @@ export default function Home() {
       </Head>
       <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-400 to-blue-600 text-white">
         <main className="flex-grow flex flex-col items-center justify-center p-8 text-center">
-          <Image
-            src="/xrpl-blue.png"
-            alt="XRPL BLUE mascot"
-            width={200}
-            height={200}
-            priority
-          />
+          <div className="relative">
+            <Image
+              src="/xrpl-blue.png"
+              alt="XRPL BLUE mascot"
+              width={200}
+              height={200}
+              priority
+            />
+            {/* Animated HYPE Airdrop bubble */}
+            <div className="absolute -top-4 -right-4 bg-yellow-400 text-blue-800 rounded-full p-3 transform rotate-12 shadow-lg">
+              <p className="text-sm font-bold whitespace-nowrap">{bubbleText}</p>
+            </div>
+          </div>
           <h1 className="text-4xl font-bold mt-8 mb-2">XRPL BLUE</h1>
           <p className="text-xl mb-6">The cutest meme coin on the XRP Ledger!</p>
           
