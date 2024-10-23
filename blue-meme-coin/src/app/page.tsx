@@ -47,7 +47,7 @@ export default function Home() {
             </div>
           </div>
           {/* Remove the separate "Hi, I'm BLUE" text */}
-          <h1 className="text-4xl font-bold mt-6 mb-2">XRPL BLUE</h1>
+          <h1 className="text-4xl font-bold mt-6 mb-2">BLUE</h1>
           <p className="text-xl mb-6">The cutest meme coin on the XRP Ledger!</p>
 
           <div className="flex flex-wrap gap-4 justify-center">
