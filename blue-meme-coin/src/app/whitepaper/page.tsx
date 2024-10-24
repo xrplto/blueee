@@ -1,7 +1,82 @@
-import React from 'react';
+"use client";
+
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 const WhitepaperPage: React.FC = () => {
+  const [bubbleText, setBubbleText] = useState("Hi, I'm BLUE");
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const texts = [
+      "Hi, I'm BLUE",
+      "HYPE Airdrop",
+      "Coming Soon!",
+      "NFT holders",
+      "BLUE to the moon!"
+    ];
+    let currentIndex = 0;
+
+    const intervalId = setInterval(() => {
+      currentIndex = (currentIndex + 1) % texts.length;
+      setBubbleText(texts[currentIndex]);
+    }, 3000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
+  const handleTweet = () => {
+    const tweets = [
+      "🟦 $BLUE to the moon! 🚀 The cutest meme coin on the XRP Ledger is taking off! 🌙 #XRPLBLUE",
+      "Just aped into $BLUE! 🦍💙 This meme coin is going to change the game! 🎮💰 #XRPLBLUE",
+      "🟦 $BLUE is the new green! 💙💹 #XRPLBLUE is pumping and I'm here for it! 📈",
+      // ... (add more tweets as needed)
+    ];
+    const randomTweet = tweets[Math.floor(Math.random() * tweets.length)];
+    const tweetText = encodeURIComponent(randomTweet);
+    const tweetUrl = `https://twitter.com/intent/tweet?text=${tweetText}`;
+    window.open(tweetUrl, '_blank');
+  };
+
+  const handleDownload = () => {
+    if (canvasRef.current) {
+      const canvas = canvasRef.current;
+      const ctx = canvas.getContext('2d');
+      if (ctx) {
+        // Create gradient
+        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient.addColorStop(0, '#60A5FA');  // blue-400
+        gradient.addColorStop(1, '#2563EB');  // blue-600
+
+        // Set up rounded rectangle
+        const width = 400;
+        const height = 400;
+        const radius = 40;
+
+        // Draw rounded rectangle with gradient
+        ctx.beginPath();
+        ctx.moveTo(radius, 0);
+        ctx.arcTo(width, 0, width, height, radius);
+        ctx.arcTo(width, height, 0, height, radius);
+        ctx.arcTo(0, height, 0, 0, radius);
+        ctx.arcTo(0, 0, width, 0, radius);
+        ctx.closePath();
+
+        ctx.fillStyle = gradient;
+        ctx.fill();
+
+        // Convert canvas to PNG
+        const dataUrl = canvas.toDataURL('image/png');
+        const downloadLink = document.createElement('a');
+        downloadLink.href = dataUrl;
+        downloadLink.download = 'blue_square.png';
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+      }
+    }
+  };
+
   return (
     <div className="bg-gradient-to-br from-blue-600 to-blue-900 text-blue-200 min-h-screen">
       <div className="max-w-5xl mx-auto px-4 py-16">
@@ -13,6 +88,25 @@ const WhitepaperPage: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg shadow-lg transform rotate-3"></div>
             <div className="absolute inset-0 bg-gradient-to-tr from-blue-400 to-blue-600 rounded-lg shadow-lg transform -rotate-3"></div>
             <div className="absolute inset-0 bg-[#3B82F6] rounded-[20px]"></div>
+            <canvas ref={canvasRef} width="400" height="400" className="hidden"></canvas>
+            {/* New Tweet and Download buttons */}
+            <div className="absolute bottom-2 right-2 flex space-x-2">
+              <button
+                onClick={handleTweet}
+                className="bg-blue-200 text-blue-800 font-bold py-1 px-2 rounded-full hover:bg-blue-300 transition-colors text-xs"
+              >
+                Tweet 🔵
+              </button>
+              <button
+                onClick={handleDownload}
+                className="bg-green-200 text-green-800 font-bold py-1 px-2 rounded-full hover:bg-green-300 transition-colors text-xs"
+              >
+                Download 📥
+              </button>
+            </div>
+          </div>
+          <div className="absolute -top-6 -right-6 bg-yellow-400 text-blue-800 rounded-full p-2 transform rotate-12 shadow-lg">
+            <p className="text-xs font-bold whitespace-nowrap">{bubbleText}</p>
           </div>
           <h1 className="text-5xl font-extrabold mb-2 text-white">XRPL BLUE Whitepaper</h1>
           <h2 className="text-2xl font-light italic">The Blue Wave of the XRP Ledger</h2>
