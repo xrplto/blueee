@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import './whitepaper.css'; // We'll create this file for the wave animation
 
 const WhitepaperPage: React.FC = () => {
   const [bubbleText, setBubbleText] = useState("Hi, I'm BLUE");
@@ -118,8 +119,32 @@ const WhitepaperPage: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-blue-600 to-blue-900 text-blue-200 min-h-screen">
-      <div className="max-w-5xl mx-auto px-4 py-16">
+    <div className="bg-gradient-to-br from-blue-600 to-blue-900 text-blue-200 min-h-screen relative overflow-hidden">
+      {/* Wave-like background */}
+      <div className="absolute inset-0 z-0">
+        <svg
+          className="w-full h-full"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <path
+              id="wave"
+              d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+            />
+          </defs>
+          <g className="waves">
+            <use xlinkHref="#wave" x="48" y="0" fill="rgba(147, 197, 253, 0.7)" />
+            <use xlinkHref="#wave" x="48" y="3" fill="rgba(96, 165, 250, 0.5)" />
+            <use xlinkHref="#wave" x="48" y="5" fill="rgba(59, 130, 246, 0.3)" />
+            <use xlinkHref="#wave" x="48" y="7" fill="rgba(37, 99, 235, 0.1)" />
+          </g>
+        </svg>
+      </div>
+
+      <div className="max-w-5xl mx-auto px-4 py-16 relative z-10">
         <header className="text-center mb-16 relative pt-12 sm:pt-0">
           <Link href="/" className="absolute left-0 top-0 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition-colors">
             ← Back
