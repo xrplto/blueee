@@ -138,42 +138,42 @@ export default function Home() {
           </svg>
         </div>
 
-        <main className="flex-grow flex flex-col items-center justify-center p-4 text-center relative z-10">
+        <main className="flex-grow flex flex-col items-center justify-center p-4 pt-12 sm:pt-4 text-center relative z-10">
           <div className="relative">
-            <div className="relative w-[400px] h-[400px] flex items-center justify-center">
+            <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg shadow-lg transform rotate-3"></div>
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-400 to-blue-600 rounded-lg shadow-lg transform -rotate-3"></div>
               <canvas ref={canvasRef} width="400" height="400" className="hidden"></canvas>
-              <div className="w-[400px] h-[400px] bg-[#3B82F6] rounded-[40px]"></div>
+              <div className="w-full h-full bg-[#3B82F6] rounded-[40px]"></div>
               {/* New Tweet and Download buttons */}
-              <div className="absolute bottom-4 right-4 flex space-x-2">
+              <div className="absolute bottom-2 right-2 sm:bottom-4 sm:right-4 flex space-x-2">
                 <button
                   onClick={handleTweet}
-                  className="bg-blue-200 text-blue-800 font-bold py-2 px-4 rounded-full hover:bg-blue-300 transition-colors text-sm"
+                  className="bg-blue-200 text-blue-800 font-bold py-1 px-2 sm:py-2 sm:px-4 rounded-full hover:bg-blue-300 transition-colors text-xs sm:text-sm"
                 >
                   Tweet 🔵
                 </button>
                 <button
                   onClick={handleDownload}
-                  className="bg-green-200 text-green-800 font-bold py-2 px-4 rounded-full hover:bg-green-300 transition-colors text-sm"
+                  className="bg-green-200 text-green-800 font-bold py-1 px-2 sm:py-2 sm:px-4 rounded-full hover:bg-green-300 transition-colors text-xs sm:text-sm"
                 >
                   Download 📥
                 </button>
               </div>
             </div>
-            <div className="absolute -top-8 -right-8 bg-yellow-400 text-blue-800 rounded-full p-3 transform rotate-12 shadow-lg">
-              <p className="text-sm font-bold whitespace-nowrap">{bubbleText}</p>
+            <div className="absolute -top-6 -right-6 sm:-top-8 sm:-right-8 bg-yellow-400 text-blue-800 rounded-full p-2 sm:p-3 transform rotate-12 shadow-lg">
+              <p className="text-xs sm:text-sm font-bold whitespace-nowrap">{bubbleText}</p>
             </div>
           </div>
-          <h1 className="text-3xl font-bold mt-6 mb-2 text-blue-200">BLUE</h1>
-          <p className="text-lg mb-4 text-blue-200">The cutest meme coin on the XRP Ledger!</p>
+          <h1 className="text-2xl sm:text-3xl font-bold mt-6 mb-2 text-blue-200">BLUE</h1>
+          <p className="text-base sm:text-lg mb-4 text-blue-200">The cutest meme coin on the XRP Ledger!</p>
 
           <div className="flex flex-wrap gap-2 justify-center">
-            <button className="bg-blue-200 text-blue-800 font-bold py-1 px-4 rounded-full hover:bg-blue-300 transition-colors text-sm">
+            <button className="bg-blue-200 text-blue-800 font-bold py-1 px-3 sm:px-4 rounded-full hover:bg-blue-300 transition-colors text-xs sm:text-sm">
               Buy Now
             </button>
             <button
-              className="bg-transparent border-2 border-blue-200 text-blue-200 font-bold py-1 px-4 rounded-full hover:bg-blue-200 hover:text-blue-800 transition-colors text-sm"
+              className="bg-transparent border-2 border-blue-200 text-blue-200 font-bold py-1 px-3 sm:px-4 rounded-full hover:bg-blue-200 hover:text-blue-800 transition-colors text-xs sm:text-sm"
               onClick={() => setShowModal(true)}
             >
               Learn More
@@ -182,7 +182,7 @@ export default function Home() {
               href="https://xrplblue.printful.me/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-yellow-400 text-blue-800 font-bold py-1 px-4 rounded-full hover:bg-yellow-300 transition-colors text-sm"
+              className="bg-yellow-400 text-blue-800 font-bold py-1 px-3 sm:px-4 rounded-full hover:bg-yellow-300 transition-colors text-xs sm:text-sm"
             >
               Shop Merch
             </a>
@@ -190,7 +190,7 @@ export default function Home() {
               href="https://t.me/xrplblue"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-800 text-blue-200 font-bold py-1 px-4 rounded-full hover:bg-blue-900 transition-colors text-sm"
+              className="bg-blue-800 text-blue-200 font-bold py-1 px-3 sm:px-4 rounded-full hover:bg-blue-900 transition-colors text-xs sm:text-sm"
             >
               Join Telegram
             </a>
@@ -198,37 +198,37 @@ export default function Home() {
 
           <a
             href="/whitepaper"
-            className="mt-2 text-blue-200 underline hover:text-yellow-400 transition-colors text-sm"
+            className="mt-2 text-blue-200 underline hover:text-yellow-400 transition-colors text-xs sm:text-sm"
           >
             Read our Whitepaper
           </a>
 
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl">
             <div className="bg-blue-800/50 p-4 rounded-lg backdrop-blur-sm">
-              <h2 className="text-xl font-bold mb-1 text-blue-200">Fast</h2>
-              <p className="text-blue-200 text-sm">Lightning-quick transactions on the XRP Ledger</p>
+              <h2 className="text-lg sm:text-xl font-bold mb-1 text-blue-200">Fast</h2>
+              <p className="text-blue-200 text-xs sm:text-sm">Lightning-quick transactions on the XRP Ledger</p>
             </div>
             <div className="bg-blue-800/50 p-4 rounded-lg backdrop-blur-sm">
-              <h2 className="text-xl font-bold mb-1 text-blue-200">Cute</h2>
-              <p className="text-blue-200 text-sm">The most adorable mascot in the crypto world</p>
+              <h2 className="text-lg sm:text-xl font-bold mb-1 text-blue-200">Cute</h2>
+              <p className="text-blue-200 text-xs sm:text-sm">The most adorable mascot in the crypto world</p>
             </div>
             <div className="bg-blue-800/50 p-4 rounded-lg backdrop-blur-sm">
-              <h2 className="text-xl font-bold mb-1 text-blue-200">Community</h2>
-              <p className="text-blue-200 text-sm">Join our growing family of XRPL BLUE enthusiasts</p>
+              <h2 className="text-lg sm:text-xl font-bold mb-1 text-blue-200">Community</h2>
+              <p className="text-blue-200 text-xs sm:text-sm">Join our growing family of XRPL BLUE enthusiasts</p>
             </div>
           </div>
         </main>
 
-        <section className="py-8 px-4 bg-blue-800/70 backdrop-blur-sm relative z-10">
+        <section className="py-6 sm:py-8 px-4 bg-blue-800/70 backdrop-blur-sm relative z-10">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold mb-4 text-blue-200">The Legend of $BLUE</h2>
-            <p className="text-blue-200 mb-2 leading-relaxed text-sm">
+            <h2 className="text-xl sm:text-2xl font-bold mb-4 text-blue-200">The Legend of $BLUE</h2>
+            <p className="text-blue-200 mb-2 leading-relaxed text-xs sm:text-sm">
               In the deep waters of the XRP Ledger, where $BLUE rules the currents, there&apos; s no shortage of legendary captains steering this digital ship. At the helm, you&apos; ve got Brad &ldquo;Big Blue&rdquo; Sailhouse, a man who could trade in a hurricane without losing his sea legs, and his trusty co-captain, David &ldquo;Deep Blue&rdquo; Wavewartz, the code-writing genius who can debug smart contracts while snorkeling.
             </p>
-            <p className="text-blue-200 mb-2 leading-relaxed text-sm">
+            <p className="text-blue-200 mb-2 leading-relaxed text-xs sm:text-sm">
               Lurking in the shadows was Arthur &ldquo;The Unseen Blue&rdquo; Subbritto, a figure so mysterious that people say he communicates through blockchain ripples, never seen but always felt. Then, of course, there&apos; s Chris &ldquo;Blue Turbo&rdquo; Larsplash, who&apos; s more interested in speeding up transactions—and his digital Porsche—than anything else, always pushing for faster trades.
             </p>
-            <p className="text-blue-200 mb-2 leading-relaxed text-sm">
+            <p className="text-blue-200 mb-2 leading-relaxed text-xs sm:text-sm">
               But let&apos; s not forget Jed &ldquo;Blue Drift&rdquo; McWhaleb, who made waves by charting his own course, sailing off to explore new oceans but leaving behind a legacy of tidal shifts in the ledger. Together, these characters turned $BLUE from a simple currency into a legendary treasure that flows through the decentralized seas, offering power, protection, and a lot of good-natured maritime banter!
             </p>
           </div>
@@ -250,19 +250,19 @@ export default function Home() {
 
         {showModal && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-            <div className="bg-blue-800 text-blue-200 p-6 rounded-lg max-w-xl w-full">
-              <h2 className="text-2xl font-bold mb-3">About XRPL BLUE</h2>
-              <p className="mb-3 text-sm">
+            <div className="bg-blue-800 text-blue-200 p-4 sm:p-6 rounded-lg max-w-xl w-full">
+              <h2 className="text-xl sm:text-2xl font-bold mb-3">About XRPL BLUE</h2>
+              <p className="mb-3 text-xs sm:text-sm">
                 BLUE IS THE PULSE-POUNDING SOCIAL CATALYST AND COMMUNITY-DRIVEN MEME COIN OF THE XRP LEDGER, SEAMLESSLY WOVEN INTO THE FABRIC OF THE XRPL ECOSYSTEM AS A HIGH-OCTANE UTILITY TOKEN. OUR MISSION? TO SKYROCKET THROUGH THE CRYPTO STRATOSPHERE BY EXPANDING OUR EVER-GROWING CONSTELLATION OF INTEGRATIONS ACROSS THE XRPL UNIVERSE!
               </p>
-              <p className="mb-3 text-sm">
+              <p className="mb-3 text-xs sm:text-sm">
                 We&apos;re committed to a fair launch, with 90% of the supply being bought at First Ledger and then distributed to NFT holders. This ensures a community-focused approach from day one.
               </p>
-              <p className="mb-3 text-sm">
+              <p className="mb-3 text-xs sm:text-sm">
                 Join our vibrant community and be part of the BLUE revolution in the XRP Ledger ecosystem!
               </p>
               <button
-                className="bg-blue-200 text-blue-800 font-bold py-1 px-4 rounded-full hover:bg-blue-300 transition-colors text-sm"
+                className="bg-blue-200 text-blue-800 font-bold py-1 px-3 sm:px-4 rounded-full hover:bg-blue-300 transition-colors text-xs sm:text-sm"
                 onClick={() => setShowModal(false)}
               >
                 Close

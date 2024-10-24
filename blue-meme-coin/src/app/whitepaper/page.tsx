@@ -1,26 +1,29 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 const WhitepaperPage: React.FC = () => {
   return (
     <div className="bg-gradient-to-br from-blue-600 to-blue-900 text-blue-200 min-h-screen">
       <div className="max-w-5xl mx-auto px-4 py-16">
-        <header className="text-center mb-16 relative">
+        <header className="text-center mb-16 relative pt-12 sm:pt-0">
           <Link href="/" className="absolute left-0 top-0 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition-colors">
             ← Back
           </Link>
-          <Image src="/xrpl-blue.png" alt="XRPL BLUE Logo" width={100} height={100} className="mx-auto mb-6" />
+          <div className="relative w-[200px] h-[200px] mx-auto mb-6">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg shadow-lg transform rotate-3"></div>
+            <div className="absolute inset-0 bg-gradient-to-tr from-blue-400 to-blue-600 rounded-lg shadow-lg transform -rotate-3"></div>
+            <div className="absolute inset-0 bg-[#3B82F6] rounded-[20px]"></div>
+          </div>
           <h1 className="text-5xl font-extrabold mb-2 text-white">XRPL BLUE Whitepaper</h1>
           <h2 className="text-2xl font-light italic">The Blue Wave of the XRP Ledger</h2>
         </header>
 
-        <nav className="mb-12 flex justify-center space-x-6 text-lg">
-          <a href="#project-purpose" className="hover:text-white transition-colors">Project Purpose</a>
-          <a href="#token-utility" className="hover:text-white transition-colors">Token Utility</a>
-          <a href="#distribution" className="hover:text-white transition-colors">Distribution</a>
-          <a href="#legal-disclaimer" className="hover:text-white transition-colors">Legal Disclaimer</a>
-          <a href="#risks" className="hover:text-white transition-colors">Risks</a>
+        <nav className="mb-12 flex flex-wrap justify-center gap-4 text-lg">
+          <a href="#project-purpose" className="hover:text-white transition-colors bg-blue-700 bg-opacity-50 px-3 py-1 rounded-full">Project Purpose</a>
+          <a href="#token-utility" className="hover:text-white transition-colors bg-blue-700 bg-opacity-50 px-3 py-1 rounded-full">Token Utility</a>
+          <a href="#distribution" className="hover:text-white transition-colors bg-blue-700 bg-opacity-50 px-3 py-1 rounded-full">Distribution</a>
+          <a href="#legal-disclaimer" className="hover:text-white transition-colors bg-blue-700 bg-opacity-50 px-3 py-1 rounded-full">Legal Disclaimer</a>
+          <a href="#risks" className="hover:text-white transition-colors bg-blue-700 bg-opacity-50 px-3 py-1 rounded-full">Risks</a>
         </nav>
 
         <main className="space-y-16">
