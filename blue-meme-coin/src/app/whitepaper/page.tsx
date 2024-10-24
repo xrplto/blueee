@@ -60,6 +60,17 @@ const WhitepaperPage: React.FC = () => {
       "I tried to paint the town red, but it came out $BLUE instead! 🎨💙 Best mistake ever! Discover more: https://xrpl.blue #XRPLBLUE",
       "Roses are red, violets are $BLUE, if you're not holding XRPL BLUE, what are you gonna do? 🌹💙 Get in now: https://xrpl.blue #XRPLBLUE",
       "I asked my magic 8 ball if $BLUE will moon. It turned blue and said 'Absolutely!' 🎱💙 See the future: https://xrpl.blue #XRPLBLUE",
+      // New funny tweets about the BLUE Whitepaper
+      "Just read the $BLUE Whitepaper! It's so good, I'm thinking of framing it next to my diploma! 🎓💙 #XRPLBLUE",
+      "The $BLUE Whitepaper is like a love letter to my wallet! 💌💰 Who knew finance could be so romantic? #XRPLBLUE",
+      "Breaking: $BLUE Whitepaper nominated for a Pulitzer Prize in the 'Most Entertaining Financial Document' category! 🏆💙 #XRPLBLUE",
+      "I tried using the $BLUE Whitepaper as a bedtime story. Now my kids won't stop asking for 'token allocations'! 😴💙 #XRPLBLUE",
+      "The $BLUE Whitepaper: 50% groundbreaking tokenomics, 50% meme magic, 100% reason to FOMO in! 🧙‍♂️💙 #XRPLBLUE",
+      "Just finished the $BLUE Whitepaper. My brain is now as smooth as a freshly minted BLUE token! 🧠💙 #XRPLBLUE",
+      "The $BLUE Whitepaper is so hot, I'm using it to keep warm this winter! 🔥📄 Who needs a fireplace when you have tokenomics? #XRPLBLUE",
+      "Unpopular opinion: The $BLUE Whitepaper is better than Shakespeare. 'To HODL or not to HODL' is the real question! 🎭💙 #XRPLBLUE",
+      "I showed the $BLUE Whitepaper to my cat. Now she's trying to buy the dip with her catnip savings! 🐱💰 #XRPLBLUE",
+      "The $BLUE Whitepaper: Turning 'I don't understand crypto' into 'I'm a financial genius' since 2023! 🤓💙 #XRPLBLUE",
     ];
     const randomTweet = tweets[Math.floor(Math.random() * tweets.length)];
     const tweetText = encodeURIComponent(randomTweet);
