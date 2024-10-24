@@ -30,7 +30,36 @@ const WhitepaperPage: React.FC = () => {
       "🟦 $BLUE to the moon! 🚀 The cutest meme coin on the XRP Ledger is taking off! 🌙 #XRPLBLUE",
       "Just aped into $BLUE! 🦍💙 This meme coin is going to change the game! 🎮💰 #XRPLBLUE",
       "🟦 $BLUE is the new green! 💙💹 #XRPLBLUE is pumping and I'm here for it! 📈",
-      // ... (add more tweets as needed)
+      "Feeling $BLUE in the best way possible! 😎 #XRPLBLUE is the hottest meme coin on XRPL! 🔥",
+      "Who needs gold when you have $BLUE? 💙 #XRPLBLUE is my ticket to financial freedom! 💸",
+      "🟦 $BLUE skies ahead for #XRPLBLUE hodlers! ☁️💙 This meme coin is going stratospheric! 🛸",
+      "Just filled my bags with $BLUE! 💼💙 Ready for this rocket ship to Uranus! 🚀🪐 #XRPLBLUE",
+      "🟦 $BLUE to the moon and beyond! 🌙✨ The XRP Ledger's cutest astronaut is blasting off! #XRPLBLUE",
+      "$BLUE wave incoming! 🌊💙 Surf's up on the XRP Ledger! 🏄‍♂️ #XRPLBLUE",
+      "🟦 Forget diamond hands, I've got $BLUE hands now! 💎➡️💙 #XRPLBLUE to the moon! 🚀",
+      "The future is $BLUE! 🔮💙 Watch #XRPLBLUE paint the crypto world in shades of awesome! 🎨",
+      "🟦 $BLUE: Because every portfolio needs a splash of cuteness! 😍💙 #XRPLBLUE to the moon! 🌙",
+      // New tweets added below
+      "I'm not sad, I'm just $BLUE with excitement! 😄💙 #XRPLBLUE is making waves! 🌊",
+      "🟦 $BLUE: The only coin that looks good with my Smurf costume! 🧙‍♂️💙 #XRPLBLUE",
+      "Just convinced my grandma to buy $BLUE! She said it matches her hair! 👵💙 #XRPLBLUE",
+      "🟦 $BLUE is so hot right now, I'm using it to toast my marshmallows! 🔥🍡 #XRPLBLUE",
+      "I tried to buy the dip, but $BLUE only goes up! 📈💙 #XRPLBLUE to infinity and beyond! 🚀",
+      "🟦 $BLUE: The official currency of Cookie Monster's dreams! 🍪💙 #XRPLBLUE nom nom nom!",
+      // New tweets with lore characters
+      "Just saw Brad 'Big Blue' Sailhouse surfing the $BLUE waves! 🏄‍♂️💙 This captain knows how to HODL! #XRPLBLUE",
+      "David 'Deep Blue' Wavewartz just fixed a bug while scuba diving! 🐠💻 $BLUE runs deep! #XRPLBLUE",
+      "Rumor has it, Arthur 'The Unseen Blue' Subbritto communicates only in $BLUE emojis! 👻💙 #XRPLBLUE",
+      "Chris 'Blue Turbo' Larsplash just made $BLUE faster than his digital Porsche! 🏎️💨 #XRPLBLUE to the moon!",
+      "Jed 'Blue Drift' McWhaleb left, but $BLUE keeps swimming! 🐳💙 Once BLUE, always BLUE! #XRPLBLUE",
+      "The $BLUE crew is assembling! 🦸‍♂️🦸‍♀️ Who's your favorite BLUE legend? #XRPLBLUE",
+      // New funny tweets with link
+      "Just found out my mood ring turns $BLUE when I check my portfolio! 💍💙 Must be a good sign! 🚀 Learn more: https://xrpl.blue #XRPLBLUE",
+      "Breaking: Scientists confirm $BLUE is the official color of financial freedom! 🧑‍🔬💙 Join the revolution: https://xrpl.blue #XRPLBLUE",
+      "My therapist said I talk about $BLUE too much. So I got a new therapist! 🛋️💙 Find out why: https://xrpl.blue #XRPLBLUE",
+      "I tried to paint the town red, but it came out $BLUE instead! 🎨💙 Best mistake ever! Discover more: https://xrpl.blue #XRPLBLUE",
+      "Roses are red, violets are $BLUE, if you're not holding XRPL BLUE, what are you gonna do? 🌹💙 Get in now: https://xrpl.blue #XRPLBLUE",
+      "I asked my magic 8 ball if $BLUE will moon. It turned blue and said 'Absolutely!' 🎱💙 See the future: https://xrpl.blue #XRPLBLUE",
     ];
     const randomTweet = tweets[Math.floor(Math.random() * tweets.length)];
     const tweetText = encodeURIComponent(randomTweet);
