@@ -256,7 +256,7 @@ export default function Home() {
                 BLUE IS THE PULSE-POUNDING SOCIAL CATALYST AND COMMUNITY-DRIVEN MEME COIN OF THE XRP LEDGER, SEAMLESSLY WOVEN INTO THE FABRIC OF THE XRPL ECOSYSTEM AS A HIGH-OCTANE UTILITY TOKEN. OUR MISSION? TO SKYROCKET THROUGH THE CRYPTO STRATOSPHERE BY EXPANDING OUR EVER-GROWING CONSTELLATION OF INTEGRATIONS ACROSS THE XRPL UNIVERSE!
               </p>
               <p className="mb-3 text-xs sm:text-sm">
-                We&apos;re committed to a fair launch, with 90% of the supply being bought at First Ledger and then distributed to NFT holders. This ensures a community-focused approach from day one.
+                The full supply of $BLUE was launched on FirstLedger with 0% Developer allocation and a 2500 XRP liquidity pool that was subsequently burned, ensuring a completely fair and community-driven approach from day one with permanent liquidity.
               </p>
               <p className="mb-3 text-xs sm:text-sm">
                 Join our vibrant community and be part of the BLUE revolution in the XRP Ledger ecosystem!

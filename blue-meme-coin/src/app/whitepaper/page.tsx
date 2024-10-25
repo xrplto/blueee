@@ -13,7 +13,7 @@ const WhitepaperPage: React.FC = () => {
       "Hi, I'm BLUE",
       "Community Token",
       "0% DEV Allocation",
-      "Launched on FirstLedger",
+      "NFT holders",
       "BLUE to the moon!"
     ];
     let currentIndex = 0;
