@@ -11,9 +11,9 @@ const WhitepaperPage: React.FC = () => {
   useEffect(() => {
     const texts = [
       "Hi, I'm BLUE",
-      "HYPE Airdrop",
-      "Coming Soon!",
-      "NFT holders",
+      "Community Token",
+      "0% DEV Allocation",
+      "Launched on FirstLedger",
       "BLUE to the moon!"
     ];
     let currentIndex = 0;
@@ -44,7 +44,7 @@ const WhitepaperPage: React.FC = () => {
       "I'm not sad, I'm just $BLUE with excitement! 😄💙 #XRPLBLUE is making waves! 🌊",
       "🟦 $BLUE: The only coin that looks good with my Smurf costume! 🧙‍♂️💙 #XRPLBLUE",
       "Just convinced my grandma to buy $BLUE! She said it matches her hair! 👵💙 #XRPLBLUE",
-      "🟦 $BLUE is so hot right now, I'm using it to toast my marshmallows! ���🍡 #XRPLBLUE",
+      "🟦 $BLUE is so hot right now, I'm using it to toast my marshmallows! 🍡 #XRPLBLUE",
       "I tried to buy the dip, but $BLUE only goes up! 📈💙 #XRPLBLUE to infinity and beyond! 🚀",
       "🟦 $BLUE: The official currency of Cookie Monster's dreams! 🍪💙 #XRPLBLUE nom nom nom!",
       // New tweets with lore characters
