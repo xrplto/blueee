@@ -168,9 +168,14 @@ export default function Home() {
           <p className="text-base sm:text-lg mb-4 text-blue-200">The cutest meme coin on the XRP Ledger!</p>
 
           <div className="flex flex-wrap gap-2 justify-center">
-            <button className="bg-blue-200 text-blue-800 font-bold py-1 px-3 sm:px-4 rounded-full hover:bg-blue-300 transition-colors text-xs sm:text-sm">
+            <a
+              href="https://firstledger.net/token/rDPQ9k3w791dgPNw6FwivrbfHVexaLhZXJ/424C554500000000000000000000000000000000"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-200 text-blue-800 font-bold py-1 px-3 sm:px-4 rounded-full hover:bg-blue-300 transition-colors text-xs sm:text-sm"
+            >
               Buy Now
-            </button>
+            </a>
             <button
               className="bg-transparent border-2 border-blue-200 text-blue-200 font-bold py-1 px-3 sm:px-4 rounded-full hover:bg-blue-200 hover:text-blue-800 transition-colors text-xs sm:text-sm"
               onClick={() => setShowModal(true)}
