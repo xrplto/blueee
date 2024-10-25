@@ -44,7 +44,7 @@ const WhitepaperPage: React.FC = () => {
       "I'm not sad, I'm just $BLUE with excitement! 😄💙 #XRPLBLUE is making waves! 🌊",
       "🟦 $BLUE: The only coin that looks good with my Smurf costume! 🧙‍♂️💙 #XRPLBLUE",
       "Just convinced my grandma to buy $BLUE! She said it matches her hair! 👵💙 #XRPLBLUE",
-      "🟦 $BLUE is so hot right now, I'm using it to toast my marshmallows! 🔥🍡 #XRPLBLUE",
+      "🟦 $BLUE is so hot right now, I'm using it to toast my marshmallows! ���🍡 #XRPLBLUE",
       "I tried to buy the dip, but $BLUE only goes up! 📈💙 #XRPLBLUE to infinity and beyond! 🚀",
       "🟦 $BLUE: The official currency of Cookie Monster's dreams! 🍪💙 #XRPLBLUE nom nom nom!",
       // New tweets with lore characters
@@ -201,12 +201,12 @@ const WhitepaperPage: React.FC = () => {
 
           <section id="distribution">
             <h2 className="text-3xl font-bold mb-6 border-b border-blue-400 pb-2">Distribution</h2>
-            <p className="mb-4 leading-relaxed">XRPL BLUE is committed to a fair launch, ensuring a community-focused approach from day one. The distribution of XRPL BLUE tokens will be as follows:</p>
+            <p className="mb-4 leading-relaxed">XRPL BLUE was launched with a 100% fair distribution model, with zero developer allocation or pre-mine. The entire token supply was distributed through FirstLedger as follows:</p>
             <ul className="list-disc pl-6 space-y-2 leading-relaxed">
-              <li>90% Community Distribution: Bought at First Ledger and then distributed to NFT holders</li>
-              <li>10% AMM Pool: Left in the Automated Market Maker pool to ensure liquidity and support the fair token launch</li>
+              <li>100% Community Distribution: The entire token supply was made available on FirstLedger for fair public distribution</li>
+              <li>0% Developer Allocation: No tokens were reserved for the team or developers</li>
             </ul>
-            <p className="mt-4 leading-relaxed">This distribution model ensures that the vast majority of the token supply is in the hands of the community from the start, promoting decentralization and fair participation in the XRPL BLUE ecosystem. The 10% left in the AMM pool helps maintain liquidity and supports the fair launch mechanism, allowing for smoother trading and price discovery.</p>
+            <p className="mt-4 leading-relaxed">This distribution model represents one of the fairest launches in the XRPL ecosystem, ensuring complete decentralization from day one. By making 100% of the supply available through FirstLedger, we eliminated any concerns about team allocations or hidden token reserves, creating a truly community-owned token.</p>
           </section>
 
           <section id="legal-disclaimer">
