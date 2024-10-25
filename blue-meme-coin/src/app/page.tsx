@@ -12,10 +12,9 @@ export default function Home() {
   useEffect(() => {
     const texts = [
       "Hi, I'm BLUE",
-      "HYPE Airdrop",
-      "Coming Soon!",
-      "NFT holders",
-      "BLUE to the moon!"
+      "BLUE to the moon!",
+      "XRP Ledger meme coin",
+      "Launched on FirstLedger"
     ];
     let currentIndex = 0;
 
